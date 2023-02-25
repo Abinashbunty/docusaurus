@@ -42,10 +42,8 @@ export {
   useAnnouncementBar,
 } from './contexts/announcementBar';
 
-export {
-  useTabGroupChoice,
-  TabGroupChoiceProvider,
-} from './contexts/tabGroupChoice';
+export {useTabs} from './utils/tabsUtils';
+export type {TabValue, TabsProps, TabItemProps} from './utils/tabsUtils';
 
 export {useNavbarMobileSidebar} from './contexts/navbarMobileSidebar';
 export {useNavbarSecondaryMenu} from './contexts/navbarSecondaryMenu/display';
@@ -67,8 +65,10 @@ export {
   isDocsPluginEnabled,
   useDocById,
   findSidebarCategory,
-  findFirstCategoryLink,
+  findFirstSidebarItemLink,
   isActiveSidebarItem,
+  isVisibleSidebarItem,
+  useVisibleSidebarItems,
   useSidebarBreadcrumbs,
   useDocsVersionCandidates,
   useLayoutDoc,
@@ -82,7 +82,11 @@ export {useLocationChange} from './utils/useLocationChange';
 
 export {useLocalPathname} from './utils/useLocalPathname';
 
-export {useHistoryPopHandler} from './utils/historyUtils';
+export {
+  useHistoryPopHandler,
+  useHistorySelector,
+  useQueryStringValue,
+} from './utils/historyUtils';
 
 export {
   useFilteredAndTreeifiedTOC,
@@ -108,6 +112,8 @@ export {
   useTOCHighlight,
   type TOCHighlightConfig,
 } from './hooks/useTOCHighlight';
+
+export {useVisibleBlogSidebarItems} from './utils/blogUtils';
 
 export {useHideableNavbar} from './hooks/useHideableNavbar';
 export {
